@@ -20,7 +20,8 @@
     "coverage": "run-s lint compile unit:coverage",
     "prepublish": "run-s lint test build",
     "release": "standard-version",
-    "publish": "git push --follow-tags && npm publish"
+    "publish": "git push --follow-tags && npm publish",
+    "prepare": "husky install"
   },
   "keywords": [
     "typescript"
@@ -32,31 +33,25 @@
       "build/**/*.test.js"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint --config commitlint.config.json -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run test"
-    }
-  },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "@types/node": "14.14.22",
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
+    "@types/node": "14.14.41",
     "@types/webpack-env": "1.16.0",
-    "@typescript-eslint/eslint-plugin": "4.14.0",
-    "@typescript-eslint/parser": "4.14.0",
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
     "ava": "3.15.0",
-    "eslint": "7.18.0",
+    "eslint": "7.24.0",
     "eslint-config-standard": "16.0.2",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-standard": "4.1.0",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "npm-run-all": "4.1.5",
     "nyc": "15.1.0",
-    "standard-version": "9.1.0",
+    "standard-version": "9.2.0",
     "tsconfigs": "5.0.0",
-    "typescript": "4.1.3"
+    "typescript": "4.2.4"
   }
 }
